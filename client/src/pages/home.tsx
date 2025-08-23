@@ -111,9 +111,9 @@ export default function Home() {
       </div>
       <!-- Video -->
       <div class="px-4 mb-2">
-        <div class="w-full rounded-lg overflow-hidden">
+        <div class="w-full overflow-hidden">
           <video class="w-full h-auto" width="320" height="180" autoplay muted loop controls data-testid="video-voa-brasil">
-            <source src="@assets/copy_C64C9D04-ABE4-49AB-B939-BB03FBCAD1B6_1755907531565.mp4" type="video/mp4">
+            <source src="/attached_assets/copy_C64C9D04-ABE4-49AB-B939-BB03FBCAD1B6_1755907531565.mp4" type="video/mp4">
             Seu navegador não suporta a tag de vídeo.
           </video>
         </div>
