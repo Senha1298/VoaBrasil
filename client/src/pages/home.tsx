@@ -256,7 +256,7 @@ export default function Home() {
       </div>
       <!-- Article Body Continued -->
       <div class="px-4 text-base leading-relaxed">
-        <h2 class="text-lg font-black mb-2 mt-4" data-testid="text-heading-participar">
+        <h2 class="text-lg font-black mb-2 mt-4" style="font-weight: 900 !important; font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;" data-testid="text-heading-participar">
           Quem pode participar do <span>Voa Brasil</span>?
         </h2>
         <p class="mb-4" data-testid="text-participar-intro">
@@ -277,7 +277,7 @@ export default function Home() {
             Estar com CPF regularizado.
           </li>
         </ul>
-        <h2 class="text-lg font-black mb-2 mt-4" data-testid="text-heading-beneficio">
+        <h2 class="text-lg font-black mb-2 mt-4" style="font-weight: 900 !important; font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;" data-testid="text-heading-beneficio">
           Como funciona o benefício?
         </h2>
         <p class="mb-4" data-testid="text-beneficio-1">
@@ -294,7 +294,7 @@ export default function Home() {
         <p class="mb-4" data-testid="text-beneficio-2">
           As passagens podem ser adquiridas diretamente pelo site do programa, após o cadastro e validação dos dados. O benefício é pessoal e intransferível.
         </p>
-        <h2 class="text-lg font-black mb-2 mt-4" data-testid="text-heading-importancia">
+        <h2 class="text-lg font-black mb-2 mt-4" style="font-weight: 900 !important; font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;" data-testid="text-heading-importancia">
           Por que o <span>Voa Brasil</span> é importante?
         </h2>
         <p class="mb-4" data-testid="text-importancia">
