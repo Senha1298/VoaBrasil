@@ -34,28 +34,24 @@ export default function Home() {
         font-display: swap;
       }
       
-      * {
-        font-family: 'Roboto', Arial, sans-serif !important;
-      }
-      
       body {
-        font-family: 'Roboto', Arial, sans-serif !important;
-        font-weight: 400;
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
+        font-weight: 300;
       }
       
       h1, h2, .font-black {
-        font-family: 'Roboto', Arial, sans-serif !important;
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
         font-weight: 900 !important;
       }
       
       h2 {
-        font-family: 'Roboto', Arial, sans-serif !important;
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;
         font-weight: 900 !important;
         font-style: normal !important;
       }
       
       h2.text-lg {
-        font-family: 'Roboto', Arial, sans-serif !important;
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;
         font-weight: 900 !important;
         font-style: normal !important;
       }
@@ -63,29 +59,29 @@ export default function Home() {
       [data-testid="text-heading-participar"],
       [data-testid="text-heading-beneficio"], 
       [data-testid="text-heading-importancia"] {
-        font-family: 'Roboto', Arial, sans-serif !important;
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;
         font-weight: 900 !important;
         font-style: normal !important;
       }
       
       .font-bold, b, strong {
-        font-family: 'Roboto', Arial, sans-serif !important;
-        font-weight: 700 !important;
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
+        font-weight: 600 !important;
       }
       
       .font-normal, p {
-        font-family: 'Roboto', Arial, sans-serif !important;
-        font-weight: 400 !important;
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
+        font-weight: 300 !important;
       }
       
       .text-xs, .text-sm {
-        font-family: 'Roboto', Arial, sans-serif !important;
-        font-weight: 400;
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
+        font-weight: 300;
       }
       
       .text-base {
-        font-family: 'Roboto', Arial, sans-serif !important;
-        font-weight: 400 !important;
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
+        font-weight: 300 !important;
       }
       
       .audio-bar {
