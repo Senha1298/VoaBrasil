@@ -51,12 +51,17 @@ export default function Home() {
       
       .font-normal, p {
         font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
-        font-weight: 400;
+        font-weight: 300 !important;
       }
       
       .text-xs, .text-sm {
         font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
         font-weight: 300;
+      }
+      
+      .text-base {
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
+        font-weight: 300 !important;
       }
       
       .audio-bar {
