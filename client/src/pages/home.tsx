@@ -5,53 +5,28 @@ export default function Home() {
     // Inject the custom styles from the original HTML
     const style = document.createElement('style');
     style.textContent = `
-      @font-face {
-        font-family: 'CustomFont';
-        src: url('/attached_assets/8117a33218787fa7-s.p_1755907817528.woff2') format('woff2');
-        font-weight: 300;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'CustomFont';
-        src: url('/attached_assets/adf4fb6ca97b7f48-s.p_1755907817528.woff2') format('woff2');
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'CustomFont';
-        src: url('/attached_assets/b1fe131f39c57354-s.p_1755907817529.woff2') format('woff2');
-        font-weight: 600;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'CustomFont';
-        src: url('/attached_assets/dc0de1ec3c6f7186-s.p_1755907817529.woff2') format('woff2');
-        font-weight: 900;
-        font-style: normal;
-        font-display: swap;
+      * {
+        font-family: 'Roboto', Arial, sans-serif !important;
       }
       
       body {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
-        font-weight: 300;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-weight: 400 !important;
       }
       
       h1, h2, .font-black {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
+        font-family: 'Roboto', Arial, sans-serif !important;
         font-weight: 900 !important;
       }
       
       h2 {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
         font-weight: 900 !important;
         font-style: normal !important;
       }
       
       h2.text-lg {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
         font-weight: 900 !important;
         font-style: normal !important;
       }
@@ -59,29 +34,29 @@ export default function Home() {
       [data-testid="text-heading-participar"],
       [data-testid="text-heading-beneficio"], 
       [data-testid="text-heading-importancia"] {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
         font-weight: 900 !important;
         font-style: normal !important;
       }
       
       .font-bold, b, strong {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
-        font-weight: 600 !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-weight: 700 !important;
       }
       
       .font-normal, p {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
-        font-weight: 300 !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-weight: 400 !important;
       }
       
       .text-xs, .text-sm {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
-        font-weight: 300;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-weight: 400 !important;
       }
       
       .text-base {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
-        font-weight: 300 !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-weight: 400 !important;
       }
       
       .audio-bar {
