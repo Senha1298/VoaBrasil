@@ -112,7 +112,10 @@ export default function Home() {
       <!-- Video -->
       <div class="px-4 mb-2">
         <div class="w-full rounded-lg overflow-hidden">
-          <img alt="Frame de reportagem da CNN sobre o programa Voa Brasil, com destaque para avião comercial e texto: PASSAGENS AÉREAS A R$200 PARA QUEM RECEBE ATÉ 5 SALÁRIOS MÍNIMOS" class="w-full h-auto" height="180" src="https://replicate.delivery/xezq/1UAo9XDN8RaeMy0o4MNr1ob7ikfah1SDwRgY6fj81wMSCAaqA/out-0.png" width="320" data-testid="img-video"/>
+          <video class="w-full h-auto" width="320" height="180" autoplay muted loop controls data-testid="video-voa-brasil">
+            <source src="@assets/copy_C64C9D04-ABE4-49AB-B939-BB03FBCAD1B6_1755907531565.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+          </video>
         </div>
       </div>
       <!-- Share Button -->
