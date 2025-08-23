@@ -34,24 +34,28 @@ export default function Home() {
         font-display: swap;
       }
       
+      * {
+        font-family: 'Roboto', Arial, sans-serif !important;
+      }
+      
       body {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
-        font-weight: 300;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-weight: 400;
       }
       
       h1, h2, .font-black {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
+        font-family: 'Roboto', Arial, sans-serif !important;
         font-weight: 900 !important;
       }
       
       h2 {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
         font-weight: 900 !important;
         font-style: normal !important;
       }
       
       h2.text-lg {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
         font-weight: 900 !important;
         font-style: normal !important;
       }
@@ -59,29 +63,29 @@ export default function Home() {
       [data-testid="text-heading-participar"],
       [data-testid="text-heading-beneficio"], 
       [data-testid="text-heading-importancia"] {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
         font-weight: 900 !important;
         font-style: normal !important;
       }
       
       .font-bold, b, strong {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
-        font-weight: 600 !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-weight: 700 !important;
       }
       
       .font-normal, p {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
-        font-weight: 300 !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-weight: 400 !important;
       }
       
       .text-xs, .text-sm {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
-        font-weight: 300;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-weight: 400;
       }
       
       .text-base {
-        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
-        font-weight: 300 !important;
+        font-family: 'Roboto', Arial, sans-serif !important;
+        font-weight: 400 !important;
       }
       
       .audio-bar {
@@ -241,9 +245,9 @@ export default function Home() {
           por viagem completa (ida e volta).
         </p>
         <p class="mb-4" data-testid="text-paragraph-2">
-          <b class="text-[#c00]">ÚLTIMOS DIAS PARA SE CADASTRAR!</b> O objetivo do programa é facilitar o deslocamento de milhões de brasileiros, promovendo inclusão social e estimulando o turismo nacional. O <span class="text-[#c00] font-bold">Voa Brasil</span> é voltado especialmente para quem não viajou de avião nos últimos 12 meses.
+          <b class="text-black">Últimos dias para se cadastrar!</b> O objetivo do programa é facilitar o deslocamento de milhões de brasileiros, promovendo inclusão social e estimulando o turismo nacional. O <span class="text-[#c00] font-bold">Voa Brasil</span> é voltado especialmente para quem não viajou de avião nos últimos 12 meses.
         </p>
-        <p class="mb-4 bg-yellow-50 border-l-4 border-yellow-400 p-3">
+        <p class="mb-4">
           <b>⚠️ IMPORTANTE:</b> Esses preços excepcionais são possíveis porque as companhias aéreas possuem muitos assentos disponíveis em voos nacionais. O governo negociou diretamente com as empresas para oferecer essas vagas a preços promocionais, mas as oportunidades são limitadas!
         </p>
       </div>
