@@ -44,6 +44,10 @@ export default function Home() {
         font-weight: 900 !important;
       }
       
+      h2 {
+        font-weight: 900 !important;
+      }
+      
       .font-bold, b, strong {
         font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
         font-weight: 600 !important;
@@ -237,7 +241,7 @@ export default function Home() {
       <!-- Article Body Continued -->
       <div class="px-4 text-base leading-relaxed">
         <h2 class="text-lg font-black mb-2 mt-4" data-testid="text-heading-participar">
-          Quem pode participar do <span class="text-[#c00]">Voa Brasil</span>?
+          Quem pode participar do <span>Voa Brasil</span>?
         </h2>
         <p class="mb-4" data-testid="text-participar-intro">
           Para participar do programa, é necessário:
@@ -275,7 +279,7 @@ export default function Home() {
           As passagens podem ser adquiridas diretamente pelo site do programa, após o cadastro e validação dos dados. O benefício é pessoal e intransferível.
         </p>
         <h2 class="text-lg font-black mb-2 mt-4" data-testid="text-heading-importancia">
-          Por que o <span class="text-[#c00]">Voa Brasil</span> é importante?
+          Por que o <span>Voa Brasil</span> é importante?
         </h2>
         <p class="mb-4" data-testid="text-importancia">
           O <span class="text-[#c00] font-bold">Voa Brasil</span> busca ampliar o acesso ao transporte aéreo, permitindo que mais brasileiros possam viajar pelo país a preços acessíveis. A medida também estimula o turismo, gera empregos e movimenta a economia nacional.
