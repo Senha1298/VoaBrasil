@@ -5,9 +5,60 @@ export default function Home() {
     // Inject the custom styles from the original HTML
     const style = document.createElement('style');
     style.textContent = `
-      body {
-        font-family: 'Roboto', Arial, sans-serif;
+      @font-face {
+        font-family: 'CustomFont';
+        src: url('/attached_assets/8117a33218787fa7-s.p_1755907817528.woff2') format('woff2');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
       }
+      @font-face {
+        font-family: 'CustomFont';
+        src: url('/attached_assets/adf4fb6ca97b7f48-s.p_1755907817528.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'CustomFont';
+        src: url('/attached_assets/b1fe131f39c57354-s.p_1755907817529.woff2') format('woff2');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'CustomFont';
+        src: url('/attached_assets/dc0de1ec3c6f7186-s.p_1755907817529.woff2') format('woff2');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      
+      body {
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
+        font-weight: 300;
+      }
+      
+      h1, h2, .font-black {
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
+        font-weight: 900 !important;
+      }
+      
+      .font-bold, b, strong {
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
+        font-weight: 600 !important;
+      }
+      
+      .font-normal, p {
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
+        font-weight: 400;
+      }
+      
+      .text-xs, .text-sm {
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif;
+        font-weight: 300;
+      }
+      
       .audio-bar {
         background: linear-gradient(90deg, #e5e7eb 0%, #e5e7eb 80%, #e5e7eb 100%);
         border-radius: 6px;
