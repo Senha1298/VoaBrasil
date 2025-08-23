@@ -236,12 +236,15 @@ export default function Home() {
           </b>
           possam comprar passagens aéreas de ida e volta por apenas
           <b class="text-[#c00]">
-            R$200
+            R$200,00
           </b>
-          cada.
+          por viagem completa (ida e volta).
         </p>
         <p class="mb-4" data-testid="text-paragraph-2">
-          O objetivo do programa é facilitar o deslocamento de milhões de brasileiros, promovendo inclusão social e estimulando o turismo nacional. O <span class="text-[#c00] font-bold">Voa Brasil</span> é voltado especialmente para quem não viajou de avião nos últimos 12 meses.
+          <b class="text-[#c00]">ÚLTIMOS DIAS PARA SE CADASTRAR!</b> O objetivo do programa é facilitar o deslocamento de milhões de brasileiros, promovendo inclusão social e estimulando o turismo nacional. O <span class="text-[#c00] font-bold">Voa Brasil</span> é voltado especialmente para quem não viajou de avião nos últimos 12 meses.
+        </p>
+        <p class="mb-4 bg-yellow-50 border-l-4 border-yellow-400 p-3">
+          <b>⚠️ IMPORTANTE:</b> Esses preços excepcionais são possíveis porque as companhias aéreas possuem muitos assentos disponíveis em voos nacionais. O governo negociou diretamente com as empresas para oferecer essas vagas a preços promocionais, mas as oportunidades são limitadas!
         </p>
       </div>
       <!-- Botão de Cadastro -->
@@ -285,11 +288,11 @@ export default function Home() {
           <b class="text-[#c00]">
             2 passagens aéreas por ano
           </b>
-          , com direito a ida e volta, pagando
+          , pagando apenas
           <b class="text-[#c00]">
-            R$200
+            R$200,00 por viagem completa (ida e volta)
           </b>
-          por cada trecho. O valor é fixo e não inclui taxas de embarque.
+          . O valor é fixo e não inclui taxas de embarque. <b>Isso representa uma economia de até 80% comparado aos preços regulares!</b>
         </p>
         <p class="mb-4" data-testid="text-beneficio-2">
           As passagens podem ser adquiridas diretamente pelo site do programa, após o cadastro e validação dos dados. O benefício é pessoal e intransferível.
@@ -298,7 +301,7 @@ export default function Home() {
           Por que o <span>Voa Brasil</span> é importante?
         </h2>
         <p class="mb-4" data-testid="text-importancia">
-          O <span class="text-[#c00] font-bold">Voa Brasil</span> busca ampliar o acesso ao transporte aéreo, permitindo que mais brasileiros possam viajar pelo país a preços acessíveis. A medida também estimula o turismo, gera empregos e movimenta a economia nacional.
+          O <span class="text-[#c00] font-bold">Voa Brasil</span> revoluciona o transporte aéreo nacional ao aproveitar a alta disponibilidade de assentos nos voos domésticos. Com milhares de assentos ociosos diariamente, o governo criou esta oportunidade única para que famílias brasileiras realizem o sonho de voar. Além de democratizar o acesso aos céus, o programa aquece o turismo nacional e gera empregos em todo o país.
         </p>
       </div>
       <!-- Related News -->
