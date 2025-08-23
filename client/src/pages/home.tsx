@@ -45,7 +45,23 @@ export default function Home() {
       }
       
       h2 {
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;
         font-weight: 900 !important;
+        font-style: normal !important;
+      }
+      
+      h2.text-lg {
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;
+        font-weight: 900 !important;
+        font-style: normal !important;
+      }
+      
+      [data-testid="text-heading-participar"],
+      [data-testid="text-heading-beneficio"], 
+      [data-testid="text-heading-importancia"] {
+        font-family: 'CustomFont', 'Roboto', Arial, sans-serif !important;
+        font-weight: 900 !important;
+        font-style: normal !important;
       }
       
       .font-bold, b, strong {
