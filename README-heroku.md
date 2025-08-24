@@ -74,7 +74,21 @@ node scripts/build-production.js
 PORT=3000 node dist/index.js
 ```
 
-## ⚠️ Problema anterior corrigido:
-- Removidas dependências de desenvolvimento do bundle final
-- Criada versão limpa do servidor para produção
-- Build agora funciona corretamente no Heroku
+## ⚠️ Problemas anteriores corrigidos:
+
+### Primeira tentativa:
+- ❌ Build incluía dependências de desenvolvimento
+- ❌ Bundle misturava código servidor + frontend
+
+### Solução final:
+- ✅ Servidor de produção em JavaScript puro (sem bundling)
+- ✅ Frontend buildado separadamente com Vite
+- ✅ Assets copiados automaticamente
+- ✅ Zero dependências problemáticas no runtime
+
+### Arquivos finais:
+- `server/production.js` - Servidor simples para Heroku
+- `scripts/simple-build.js` - Build apenas do frontend + assets
+- `Procfile: web: node server/production.js` - Start direto
+
+✅ **Testado e funcionando perfeitamente!**

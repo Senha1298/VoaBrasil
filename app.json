@@ -11,7 +11,7 @@
     }
   ],
   "scripts": {
-    "postinstall": "node scripts/build-production.js"
+    "postinstall": "node scripts/simple-build.js"
   },
   "env": {
     "NODE_ENV": {
