@@ -100,9 +100,9 @@ export default function Home() {
         margin: 0 10px;
       }
       .header-logo {
-        height: 38px !important;
-        max-height: 38px !important;
-        min-height: 38px !important;
+        height: 46px !important;
+        max-height: 46px !important;
+        min-height: 46px !important;
         object-fit: contain !important;
       }
     `;
@@ -140,7 +140,7 @@ export default function Home() {
   const htmlContent = `
     <div class="bg-white text-black">
       <!-- Header -->
-      <div class="w-full bg-black flex items-center px-2 py-2 fixed top-0 left-0 z-50" style="height: 40px; min-height: 40px; max-height: 40px;">
+      <div class="w-full bg-black flex items-center px-2 py-2 fixed top-0 left-0 z-50" style="height: 50px; min-height: 50px; max-height: 50px;">
         <button class="text-white text-xl mr-2" data-testid="button-menu">
           <i class="fas fa-bars"></i>
         </button>
@@ -153,7 +153,7 @@ export default function Home() {
           <img alt="Logo do Gmail, envelope estilizado com cores vermelho, azul, verde e amarelo, símbolo do serviço de e-mail do Google" class="w-6 h-6 object-contain" src="https://static.vecteezy.com/system/resources/previews/022/613/021/non_2x/google-mail-gmail-icon-logo-symbol-free-png.png"/>
         </button>
       </div>
-      <div class="h-10"></div>
+      <div class="h-12"></div>
       <!-- Section Button -->
       <div class="px-4 pt-3">
         <button class="bg-[#2d3a4a] text-white text-xs font-bold rounded px-3 py-1 mb-2" data-testid="button-politica">
@@ -182,7 +182,7 @@ export default function Home() {
       <!-- Video -->
       <div class="px-4 mb-2">
         <div class="w-full overflow-hidden">
-          <video class="w-full h-auto" width="320" height="180" autoplay loop controls data-testid="video-voa-brasil">
+          <video class="w-full h-auto" width="320" height="180" autoplay muted loop controls playsinline webkit-playsinline data-testid="video-voa-brasil">
             <source src="/attached_assets/copy_C64C9D04-ABE4-49AB-B939-BB03FBCAD1B6_1755907531565.mp4" type="video/mp4">
             Seu navegador não suporta a tag de vídeo.
           </video>
