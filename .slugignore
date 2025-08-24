@@ -1,0 +1,6 @@
+# Files to ignore during Heroku deployment
+*.log
+*.tmp
+.DS_Store
+client/node_modules/
+.env
