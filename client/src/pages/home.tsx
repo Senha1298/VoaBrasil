@@ -318,7 +318,7 @@ export default function Home() {
       <!-- Share Button -->
       <div class="px-4 mb-2">
         <div class="flex items-center border-b border-gray-200 pb-2">
-          <span class="text-[#c00] text-lg mr-2">
+          <span class="text-[#c00] text-lg mr-2 underline">
             <i class="fas fa-share-alt"></i>
           </span>
           <span class="text-base font-bold" data-testid="text-share">
@@ -332,7 +332,7 @@ export default function Home() {
           ouvir notícia
         </p>
         <div class="flex items-center audio-bar mb-2">
-          <button class="text-[#c00] text-lg mr-2" data-testid="button-play">
+          <button class="text-[#c00] text-lg mr-2 underline" data-testid="button-play">
             <i class="fas fa-play"></i>
           </button>
           <div class="audio-wave"></div>
@@ -348,15 +348,15 @@ export default function Home() {
       <div class="px-4 text-base leading-relaxed">
         <p class="mb-4" data-testid="text-paragraph-1">
           O
-          <b class="text-[#c00]">
+          <b class="text-[#c00] underline">
             Voa Brasil
           </b>
           é um programa do governo federal criado para democratizar o acesso ao transporte aéreo no país. A iniciativa permite que pessoas que recebem até
-          <b class="text-[#c00]">
+          <b class="text-[#c00] underline">
             5 salários mínimos
           </b>
           possam comprar passagens aéreas de ida e volta por apenas
-          <b class="text-[#c00]">
+          <b class="text-[#c00] underline">
             R$200,00
           </b>
           por viagem completa (ida e volta).
@@ -409,7 +409,7 @@ export default function Home() {
           <strong> Por que o Voa Brasil é importante? </strong>
         </h2>
         <p class="mb-4" data-testid="text-importancia">
-          O <span class="text-[#c00] font-bold">Voa Brasil</span> revoluciona o transporte aéreo nacional ao aproveitar a alta disponibilidade de assentos nos voos domésticos. Com milhares de assentos ociosos diariamente, o governo criou esta oportunidade única para que famílias brasileiras realizem o sonho de voar. Além de democratizar o acesso aos céus, o programa aquece o turismo nacional e gera empregos em todo o país.
+          O <span class="text-[#c00] font-bold underline">Voa Brasil</span> revoluciona o transporte aéreo nacional ao aproveitar a alta disponibilidade de assentos nos voos domésticos. Com milhares de assentos ociosos diariamente, o governo criou esta oportunidade única para que famílias brasileiras realizem o sonho de voar. Além de democratizar o acesso aos céus, o programa aquece o turismo nacional e gera empregos em todo o país.
         </p>
       </div>
       <!-- Related News -->
