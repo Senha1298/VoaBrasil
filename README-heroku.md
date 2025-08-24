@@ -47,15 +47,34 @@
 
 ## Como funciona em produção:
 
-1. Heroku executa `npm run build` automaticamente
-2. Aplicação inicia com `npm start` 
-3. Servidor Express serve tanto API quanto frontend
-4. Assets estáticos ficam disponíveis em `/attached_assets/`
+1. Heroku instala dependências com `npm install`
+2. Script `postinstall` executa automaticamente o build completo
+3. Aplicação inicia diretamente com `node dist/index.js`
+4. Servidor Express serve tanto API quanto frontend
+5. Assets estáticos ficam disponíveis em `/attached_assets/`
+
+## Build otimizado:
+
+- ✅ Frontend buildado com Vite (sem dependências de desenvolvimento)
+- ✅ Backend buildado com versão de produção limpa (sem Vite/plugins)
+- ✅ Assets copiados automaticamente durante o build
+- ✅ Bundle final muito menor e mais eficiente
+
+## Scripts importantes:
+
+- `scripts/build-production.js` - Build completo integrado
+- `scripts/copy-assets.js` - Cópia de assets (se necessário)
 
 ## Troubleshooting:
 
-Se assets não carregarem:
+Se o build falhar no Heroku:
 ```bash
-# Execute o script manualmente após build
-node scripts/copy-assets.js
+# Teste localmente
+node scripts/build-production.js
+PORT=3000 node dist/index.js
 ```
+
+## ⚠️ Problema anterior corrigido:
+- Removidas dependências de desenvolvimento do bundle final
+- Criada versão limpa do servidor para produção
+- Build agora funciona corretamente no Heroku

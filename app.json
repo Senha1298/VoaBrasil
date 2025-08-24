@@ -10,6 +10,9 @@
       "url": "heroku/nodejs"
     }
   ],
+  "scripts": {
+    "postinstall": "node scripts/build-production.js"
+  },
   "env": {
     "NODE_ENV": {
       "description": "Environment mode",
