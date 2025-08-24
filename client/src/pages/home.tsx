@@ -105,6 +105,38 @@ export default function Home() {
         min-height: 46px !important;
         object-fit: contain !important;
       }
+      
+      .video-clean {
+        position: relative;
+        cursor: pointer;
+      }
+      
+      .video-clean::-webkit-media-controls-panel {
+        display: none !important;
+        opacity: 1 !important;
+      }
+      
+      .video-clean::-webkit-media-controls-play-button {
+        display: none !important;
+        opacity: 1 !important;
+      }
+      
+      .video-clean::-webkit-media-controls-start-playback-button {
+        display: none !important;
+        opacity: 1 !important;
+      }
+      
+      .video-clean.show-controls::-webkit-media-controls-panel {
+        display: flex !important;
+      }
+      
+      .video-clean.show-controls::-webkit-media-controls-play-button {
+        display: block !important;
+      }
+      
+      .video-clean.show-controls::-webkit-media-controls-start-playback-button {
+        display: block !important;
+      }
     `;
     document.head.appendChild(style);
 
@@ -131,6 +163,55 @@ export default function Home() {
     if (dataHoraElement) {
       dataHoraElement.textContent = `${publicado} | Atualizado ${atualizado}`;
     }
+
+    // Video controls functionality
+    const setupVideoControls = () => {
+      const video = document.querySelector('[data-testid="video-voa-brasil"]') as HTMLVideoElement;
+      if (video) {
+        let controlsTimeout: NodeJS.Timeout;
+        
+        const showControls = () => {
+          video.setAttribute('controls', 'true');
+          video.classList.add('show-controls');
+          
+          // Hide controls after 3 seconds of no interaction
+          clearTimeout(controlsTimeout);
+          controlsTimeout = setTimeout(() => {
+            video.removeAttribute('controls');
+            video.classList.remove('show-controls');
+          }, 3000);
+        };
+        
+        const hideControls = () => {
+          clearTimeout(controlsTimeout);
+          controlsTimeout = setTimeout(() => {
+            video.removeAttribute('controls');
+            video.classList.remove('show-controls');
+          }, 100);
+        };
+        
+        // Show controls when clicking on video
+        video.addEventListener('click', showControls);
+        video.addEventListener('touchstart', showControls);
+        
+        // Keep controls visible while hovering (desktop)
+        video.addEventListener('mouseenter', showControls);
+        video.addEventListener('mouseleave', hideControls);
+        
+        // Try to unmute and play with sound (will fail on some browsers without user interaction)
+        video.addEventListener('loadeddata', () => {
+          video.muted = false;
+          video.play().catch(() => {
+            // If fails, try with muted
+            video.muted = true;
+            video.play();
+          });
+        });
+      }
+    };
+    
+    // Setup video controls after a short delay to ensure video element exists
+    setTimeout(setupVideoControls, 100);
 
     return () => {
       document.head.removeChild(style);
@@ -182,7 +263,7 @@ export default function Home() {
       <!-- Video -->
       <div class="px-4 mb-2">
         <div class="w-full overflow-hidden">
-          <video class="w-full h-auto" width="320" height="180" autoplay muted loop controls playsinline webkit-playsinline data-testid="video-voa-brasil">
+          <video class="w-full h-auto video-clean" width="320" height="180" autoplay loop playsinline webkit-playsinline data-testid="video-voa-brasil">
             <source src="/attached_assets/copy_C64C9D04-ABE4-49AB-B939-BB03FBCAD1B6_1755907531565.mp4" type="video/mp4">
             Seu navegador não suporta a tag de vídeo.
           </video>
