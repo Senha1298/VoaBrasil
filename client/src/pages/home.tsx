@@ -100,9 +100,9 @@ export default function Home() {
         margin: 0 10px;
       }
       .header-logo {
-        height: 32px !important;
-        max-height: 32px !important;
-        min-height: 32px !important;
+        height: 38px !important;
+        max-height: 38px !important;
+        min-height: 38px !important;
         object-fit: contain !important;
       }
     `;
