@@ -198,40 +198,61 @@ export default function Home() {
         video.addEventListener('mouseenter', showControls);
         video.addEventListener('mouseleave', hideControls);
         
-        // Ensure video starts with sound immediately
-        video.muted = false;
-        video.volume = 1.0;
-        
-        // Try multiple strategies to play with sound
-        const tryPlayWithSound = async () => {
+        // Force video to autoplay with multiple attempts
+        const forceAutoplay = async () => {
           try {
+            // First try: play with sound
             video.muted = false;
+            video.volume = 1.0;
             await video.play();
-            console.log('Video playing with sound');
-          } catch (error) {
-            console.log('Autoplay with sound failed, trying user interaction approach');
-            // Backup: wait for any user interaction to unmute
-            const enableSound = () => {
+            console.log('Video started with sound');
+          } catch (error1) {
+            try {
+              // Second try: play muted then unmute
+              video.muted = true;
+              await video.play();
               video.muted = false;
               video.volume = 1.0;
-              document.removeEventListener('click', enableSound);
-              document.removeEventListener('touchstart', enableSound);
-            };
-            document.addEventListener('click', enableSound, { once: true });
-            document.addEventListener('touchstart', enableSound, { once: true });
+              console.log('Video started muted then unmuted');
+            } catch (error2) {
+              console.log('Video autoplay failed, will start on user interaction');
+              // Enable on any user interaction
+              const startVideo = () => {
+                video.muted = false;
+                video.volume = 1.0;
+                video.play();
+                document.removeEventListener('click', startVideo);
+                document.removeEventListener('touchstart', startVideo);
+                document.removeEventListener('keydown', startVideo);
+              };
+              document.addEventListener('click', startVideo, { once: true });
+              document.addEventListener('touchstart', startVideo, { once: true });
+              document.addEventListener('keydown', startVideo, { once: true });
+            }
           }
         };
         
-        // Try immediately when video loads
-        video.addEventListener('loadeddata', tryPlayWithSound);
+        // Try to start video as soon as possible
+        if (video.readyState >= 2) {
+          // Video already loaded enough data
+          forceAutoplay();
+        } else {
+          // Wait for video to load
+          video.addEventListener('loadeddata', forceAutoplay);
+          video.addEventListener('canplay', forceAutoplay);
+        }
         
-        // Also try when video becomes ready to play
-        video.addEventListener('canplaythrough', () => {
-          if (video.muted) {
-            video.muted = false;
-            video.volume = 1.0;
+        // Additional safety check - retry every second for first 5 seconds
+        let retryCount = 0;
+        const retryInterval = setInterval(() => {
+          if (video.paused && retryCount < 5) {
+            console.log(`Retry ${retryCount + 1}: attempting to play video`);
+            forceAutoplay();
+            retryCount++;
+          } else {
+            clearInterval(retryInterval);
           }
-        });
+        }, 1000);
       }
     };
     
