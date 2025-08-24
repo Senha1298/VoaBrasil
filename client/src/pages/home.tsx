@@ -390,7 +390,7 @@ export default function Home() {
         </ul>
         <!-- Botão de Cadastro -->
         <div class="flex justify-center my-6">
-          <a class="bg-[#c00] hover:bg-red-700 text-white font-bold py-2 px-6 rounded-[2px] text-base shadow-lg transition" href="https://voabrasil.gov.br" target="_blank" data-testid="link-cadastro">
+          <a class="bg-[#c00] hover:bg-red-700 text-white font-bold py-2 px-6 rounded-[2px] text-base shadow-lg transition" href="https://voa-brasil.acesso.inc/" target="_blank" data-testid="link-cadastro">
             Cadastre-se no <span class="text-white">Voa Brasil</span>
           </a>
         </div>
