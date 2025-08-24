@@ -100,9 +100,9 @@ export default function Home() {
         margin: 0 10px;
       }
       .header-logo {
-        height: 46px !important;
-        max-height: 46px !important;
-        min-height: 46px !important;
+        height: 50px !important;
+        max-height: 50px !important;
+        min-height: 50px !important;
         object-fit: contain !important;
       }
       
