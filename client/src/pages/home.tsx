@@ -198,14 +198,39 @@ export default function Home() {
         video.addEventListener('mouseenter', showControls);
         video.addEventListener('mouseleave', hideControls);
         
-        // Try to unmute and play with sound (will fail on some browsers without user interaction)
-        video.addEventListener('loadeddata', () => {
-          video.muted = false;
-          video.play().catch(() => {
-            // If fails, try with muted
-            video.muted = true;
-            video.play();
-          });
+        // Ensure video starts with sound immediately
+        video.muted = false;
+        video.volume = 1.0;
+        
+        // Try multiple strategies to play with sound
+        const tryPlayWithSound = async () => {
+          try {
+            video.muted = false;
+            await video.play();
+            console.log('Video playing with sound');
+          } catch (error) {
+            console.log('Autoplay with sound failed, trying user interaction approach');
+            // Backup: wait for any user interaction to unmute
+            const enableSound = () => {
+              video.muted = false;
+              video.volume = 1.0;
+              document.removeEventListener('click', enableSound);
+              document.removeEventListener('touchstart', enableSound);
+            };
+            document.addEventListener('click', enableSound, { once: true });
+            document.addEventListener('touchstart', enableSound, { once: true });
+          }
+        };
+        
+        // Try immediately when video loads
+        video.addEventListener('loadeddata', tryPlayWithSound);
+        
+        // Also try when video becomes ready to play
+        video.addEventListener('canplaythrough', () => {
+          if (video.muted) {
+            video.muted = false;
+            video.volume = 1.0;
+          }
         });
       }
     };
