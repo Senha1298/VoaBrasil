@@ -100,16 +100,10 @@ export default function Home() {
         margin: 0 10px;
       }
       .header-logo {
-        height: 40px !important;
-        max-height: 40px !important;
-        min-height: 40px !important;
-      }
-      @media (min-width: 400px) {
-        .header-logo {
-          height: 48px !important;
-          max-height: 48px !important;
-          min-height: 48px !important;
-        }
+        height: 32px !important;
+        max-height: 32px !important;
+        min-height: 32px !important;
+        object-fit: contain !important;
       }
     `;
     document.head.appendChild(style);
@@ -240,18 +234,8 @@ export default function Home() {
           </b>
           por viagem completa (ida e volta).
         </p>
-        <p class="mb-4" data-testid="text-paragraph-2">
-          <b class="text-black">Últimos dias para se cadastrar!</b> O objetivo do programa é facilitar o deslocamento de milhões de brasileiros, promovendo inclusão social e estimulando o turismo nacional. O <span class="text-[#c00] font-bold">Voa Brasil</span> é voltado especialmente para quem não viajou de avião nos últimos 12 meses.
-        </p>
-        <p class="mb-4">
-          <b>⚠️ IMPORTANTE:</b> Esses preços excepcionais são possíveis porque as companhias aéreas possuem muitos assentos disponíveis em voos nacionais. O governo negociou diretamente com as empresas para oferecer essas vagas a preços promocionais, mas as oportunidades são limitadas!
-        </p>
-      </div>
-      <!-- Botão de Cadastro -->
-      <div class="flex justify-center my-6">
-        <a class="bg-[#c00] hover:bg-red-700 text-white font-bold py-2 px-6 rounded-[2px] text-base shadow-lg transition" href="https://voabrasil.gov.br" target="_blank" data-testid="link-cadastro">
-          Cadastre-se no <span class="text-white">Voa Brasil</span>
-        </a>
+
+        
       </div>
       <!-- Starlink Banner Full Width (again) -->
       <div class="w-full mb-2">
@@ -260,37 +244,34 @@ export default function Home() {
       <!-- Article Body Continued -->
       <div class="px-4 text-base leading-relaxed">
         <h2 class="text-xl font-black leading-tight mb-2 mt-4" style="font-family: 'Roboto', Arial, sans-serif; font-weight: 900 !important;" data-testid="text-heading-participar">
-          Quem pode participar do <span>Voa Brasil</span>?
+          <strong> Como participar do programa?</strong> 
         </h2>
         <p class="mb-4" data-testid="text-participar-intro">
           Para participar do programa, é necessário:
         </p>
         <ul class="list-disc pl-6 mb-4" data-testid="list-requisitos">
           <li class="mb-1">
-            Ter renda mensal de até
-            <b class="text-[#c00]">
-              5 salários mínimos
-            </b>
-            (R$7.060 em 2024);
+            Clicar no botão abaixo e realizar o cadastro no site do programa;
+          
           </li>
           <li class="mb-1">
-            Não ter realizado viagem de avião nos últimos 12 meses;
+            Pagar a Taxa de Inscrição;
           </li>
           <li class="mb-1">
             Estar com CPF regularizado.
           </li>
         </ul>
+        <!-- Botão de Cadastro -->
+        <div class="flex justify-center my-6">
+          <a class="bg-[#c00] hover:bg-red-700 text-white font-bold py-2 px-6 rounded-[2px] text-base shadow-lg transition" href="https://voabrasil.gov.br" target="_blank" data-testid="link-cadastro">
+            Cadastre-se no <span class="text-white">Voa Brasil</span>
+          </a>
+        </div>
         <h2 class="text-xl font-black leading-tight mb-2 mt-4" style="font-family: 'Roboto', Arial, sans-serif; font-weight: 900 !important;" data-testid="text-heading-beneficio">
-          Como funciona o benefício?
+         <strong> Como funciona o benefício? </strong>
         </h2>
         <p class="mb-4" data-testid="text-beneficio-1">
-          Cada pessoa cadastrada poderá comprar até
-          <b class="text-[#c00]">
-            2 passagens aéreas por ano
-          </b>
-          , pagando apenas
-          <b class="text-[#c00]">
-            R$200,00 por viagem completa (ida e volta)
+          Cada pessoa cadastrada poderá comprar até 2 passagens aéreas por ano pagando apenas R$200,00 por viagem completa (ida e volta)
           </b>
           . O valor é fixo e não inclui taxas de embarque. <b>Isso representa uma economia de até 80% comparado aos preços regulares!</b>
         </p>
@@ -298,7 +279,7 @@ export default function Home() {
           As passagens podem ser adquiridas diretamente pelo site do programa, após o cadastro e validação dos dados. O benefício é pessoal e intransferível.
         </p>
         <h2 class="text-xl font-black leading-tight mb-2 mt-4" style="font-family: 'Roboto', Arial, sans-serif; font-weight: 900 !important;" data-testid="text-heading-importancia">
-          Por que o <span>Voa Brasil</span> é importante?
+          <strong> Por que o Voa Brasil é importante? </strong>
         </h2>
         <p class="mb-4" data-testid="text-importancia">
           O <span class="text-[#c00] font-bold">Voa Brasil</span> revoluciona o transporte aéreo nacional ao aproveitar a alta disponibilidade de assentos nos voos domésticos. Com milhares de assentos ociosos diariamente, o governo criou esta oportunidade única para que famílias brasileiras realizem o sonho de voar. Além de democratizar o acesso aos céus, o programa aquece o turismo nacional e gera empregos em todo o país.
@@ -307,7 +288,7 @@ export default function Home() {
       <!-- Related News -->
       <div class="px-4 mb-4">
         <div class="flex items-center border-t border-gray-200 pt-3 mb-2">
-          <img alt="Foto de Marcos do Val, senador alvo da PF que está usando tornozeleira eletrônica" class="w-14 h-14 rounded object-cover mr-3" height="60" src="https://replicate.delivery/xezq/n2w19bWiPfXAMSG1oLlQofrfAE7diwyV8QJ0F5rMLVzrQfzUB/out-0.png" width="60" data-testid="img-related-1"/>
+          <img alt="Foto de Marcos do Val, senador alvo da PF que está usando tornozeleira eletrônica" class="w-14 h-14 rounded object-cover mr-3" height="60" src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/06/marcos_do_val_30.jpg?w=1200&h=1200&crop=1"/>
           <div>
             <p class="text-xs font-bold leading-tight mb-1" data-testid="text-related-1">
               Quem é Marcos do Val, senador alvo da PF que está usando tornozeleira eletrônica
@@ -315,7 +296,7 @@ export default function Home() {
           </div>
         </div>
         <div class="flex items-center border-t border-gray-200 pt-3">
-          <img alt="Foto de político brasileiro, Quatro frentes do governo brasileiro para reagir ao tarifação de Trump" class="w-14 h-14 rounded object-cover mr-3" height="60" src="https://replicate.delivery/xezq/Cff5yp6hmIk7J0bbl4OE9e5bGDTTPufnZJYrCW5EZhuXhenpC/out-0.png" width="60" data-testid="img-related-2"/>
+          <img alt="Foto de político brasileiro, Quatro frentes do governo brasileiro para reagir ao tarifação de Trump" class="w-14 h-14 rounded object-cover mr-3" height="60" src="https://s2-oglobo.glbimg.com/4ldcL7h9iBE4MSBpyW_g6e0394c=/0x0:6135x4090/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2025/H/h/VsIBcrTgAji1Gn9QnEDA/112060574-us-president-donald-trump-speaks-during-a-meeting-with-ukrainian-president-volodymyr-zelen.jpg"/>
           <div>
             <p class="text-xs font-bold leading-tight mb-1" data-testid="text-related-2">
               Quatro frentes do governo brasileiro para reagir ao tarifação de Trump
